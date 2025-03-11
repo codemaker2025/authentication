@@ -1,4 +1,4 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql } from "@apollo/client";
 import React from "react";
 import {
   Container,
@@ -20,9 +20,16 @@ const GET_MEASURE_YOUR_SPACE = gql`
 `;
 
 const Home = () => {
-  const { data, loading, error } = useQuery(GET_MEASURE_YOUR_SPACE, {
-    fetchPolicy: "network-only",
-  });
+  const [getMeasureYourSpace, { data, loading, error, called }] = useLazyQuery(
+    GET_MEASURE_YOUR_SPACE,
+    {
+      fetchPolicy: "network-only",
+    }
+  );
+
+  if (!called) {
+    getMeasureYourSpace();
+  }
 
   if (loading) return <Spinner animation="border" variant="primary" />;
   if (error) return <div>Error: {error.message}</div>;

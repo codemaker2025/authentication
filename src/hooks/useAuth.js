@@ -19,7 +19,7 @@ export default function useAuth() {
             console.log(res, "response from the server");
 
             const { token } = res.data.data;
-            setAuthToken(token);  // Set token into Jotai
+            setAuthToken(token);
 
         } catch (error) {
             console.error("Login failed", error);

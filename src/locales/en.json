@@ -1,0 +1,8 @@
+{
+    "firstName": "First Name",
+    "enterFirstName": "Enter your first name",
+    "firstNameRequired": "First Name is required",
+    "firstNameCannotBeJohn": "First Name cannot be 'john'",
+    "submit": "Submit"
+  }
+  

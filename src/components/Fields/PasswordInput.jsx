@@ -16,7 +16,7 @@ const PasswordInput = () => {
           name="password"
           type={showPassword ? "text" : "password"}
           placeholder="Enter password"
-          validate={(value) => (value ? undefined : "Password is required")}
+          validatefield={(value) => (value ? undefined : "Password is required")}
           className="form-control"
         />
         <InputGroup.Text

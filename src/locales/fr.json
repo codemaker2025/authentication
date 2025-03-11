@@ -1,0 +1,8 @@
+{
+    "firstName": "Prénom",
+    "enterFirstName": "Entrez votre prénom",
+    "firstNameRequired": "Le prénom est requis",
+    "firstNameCannotBeJohn": "Le prénom ne peut pas être 'john'",
+    "submit": "Soumettre"
+  }
+  

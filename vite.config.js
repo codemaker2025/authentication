@@ -8,7 +8,9 @@ export default defineConfig({
       '/graphql': {
         target: 'https://dtale.webc.in',
         changeOrigin: true,
-        secure: true, // if the target uses HTTPS
+        secure: true, // Keeps HTTPS intact
+        ws: true, // In case you use WebSockets later
+        rewrite: (path) => path.replace(/^\/graphql/, '/graphql'),
       },
     },
   },
